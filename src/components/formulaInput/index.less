@@ -1,0 +1,32 @@
+.formulaInput {
+  :global {
+    .frontLineItem {
+      position: relative;
+      border: 1px solid #d9d9d9;
+      padding: 5px;
+      height: 80px;
+      outline: none;
+      border-radius: 2px;
+
+      &:empty::after {
+        content: '允许输入数字, $, +-*/()';
+        color: #d9d9d9;
+        position: absolute;
+        top: 4px;
+        left: 8px;
+      }
+    }
+    .frontLineItem:focus {
+      outline: 1px solid #3FA9FF;
+    }
+    .frontLineItem-desc {
+      color: rgb(154, 153, 153);
+    }
+    .tag {
+      border: 1px solid transparent;
+      outline: none;
+      background-color: #fff;
+      color: #3FA9FF;
+    }
+  }
+}
